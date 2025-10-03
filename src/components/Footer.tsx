@@ -7,37 +7,37 @@ const Footer = () => {
     {
       title: "For Talent",
       links: [
-        { label: "Find Opportunities", href: "#" },
-        { label: "How It Works", href: "#" },
-        { label: "Success Stories", href: "#" },
-        { label: "FAQ", href: "#" },
+        { label: "Find Opportunities", href: "/opportunities" },
+        { label: "How It Works", href: "/#how-it-works" },
+        { label: "Success Stories", href: "/#testimonials" },
+        { label: "FAQ", href: "/faq" },
       ]
     },
     {
       title: "For Startups",
       links: [
-        { label: "Post a Project", href: "#" },
-        { label: "Pricing", href: "#" },
-        { label: "Case Studies", href: "#" },
-        { label: "Resources", href: "#" },
+        { label: "Post a Project", href: "/post-project" },
+        { label: "Pricing", href: "/pricing" },
+        { label: "Opportunities", href: "/opportunities" },
+        { label: "FAQ", href: "/faq" },
       ]
     },
     {
       title: "For Institutions",
       links: [
-        { label: "Partnership Program", href: "#" },
-        { label: "Student Tracking", href: "#" },
-        { label: "Outcomes Dashboard", href: "#" },
-        { label: "Integration Guide", href: "#" },
+        { label: "Partnership Program", href: "/partnership" },
+        { label: "About Us", href: "/about" },
+        { label: "Contact", href: "/contact" },
+        { label: "FAQ", href: "/faq" },
       ]
     },
     {
       title: "Company",
       links: [
-        { label: "About Us", href: "#" },
-        { label: "Careers", href: "#" },
-        { label: "Press", href: "#" },
-        { label: "Contact", href: "#" },
+        { label: "About Us", href: "/about" },
+        { label: "Contact", href: "/contact" },
+        { label: "Pricing", href: "/pricing" },
+        { label: "FAQ", href: "/faq" },
       ]
     }
   ];
@@ -132,13 +132,13 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#" className="hover:text-background transition-colors">
+            <a href="/contact" className="hover:text-background transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-background transition-colors">
+            <a href="/contact" className="hover:text-background transition-colors">
               Terms of Service
             </a>
-            <a href="#" className="hover:text-background transition-colors">
+            <a href="/contact" className="hover:text-background transition-colors">
               Cookie Policy
             </a>
           </div>

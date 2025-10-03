@@ -11,6 +11,7 @@ const ClosingCTA = () => {
       description: "Start building your career with real experience and equity ownership",
       buttonText: "Find Opportunities",
       buttonVariant: "hero" as const,
+      href: "/opportunities",
       benefits: ["Real projects", "Cash + equity", "Mentorship", "Portfolio building"]
     },
     {
@@ -20,6 +21,7 @@ const ClosingCTA = () => {
       description: "Access motivated talent while conserving cash and sharing growth",
       buttonText: "Hire Talent",
       buttonVariant: "cta" as const,
+      href: "/post-project",
       benefits: ["Reduce hiring costs", "Motivated talent", "Equity alignment", "Flexible terms"]
     },
     {
@@ -29,6 +31,7 @@ const ClosingCTA = () => {
       description: "Enhance student outcomes with real-world experience opportunities",
       buttonText: "Partner With Us",
       buttonVariant: "default" as const,
+      href: "/partnership",
       benefits: ["Better outcomes", "Industry connections", "Student tracking", "Success metrics"]
     }
   ];
@@ -89,9 +92,11 @@ const ClosingCTA = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Button variant={path.buttonVariant} size="xl" className="w-full group">
-                    {path.buttonText}
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <Button variant={path.buttonVariant} size="xl" className="w-full group" asChild>
+                    <a href={path.href}>
+                      {path.buttonText}
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </div>
               </Card>

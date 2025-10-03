@@ -155,9 +155,11 @@ const Partners = () => {
                   Ready to enhance your program with real-world experience opportunities?
                 </div>
                 
-                <Button variant="hero" size="xl" className="group">
-                  Become a Partner
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <Button variant="hero" size="xl" className="group" asChild>
+                  <a href="/partnership">
+                    Become a Partner
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
                 
                 <div className="text-sm text-muted-foreground">

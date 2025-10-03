@@ -29,15 +29,17 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="cta" size="xl" className="group">
-                Find Opportunities
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button variant="cta" size="xl" className="group" asChild>
+                <a href="/opportunities">
+                  Find Opportunities
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
-              <Button variant="glass" size="xl">
-                Hire Talent
+              <Button variant="glass" size="xl" asChild>
+                <a href="/post-project">Hire Talent</a>
               </Button>
-              <Button variant="glass" size="xl">
-                Partner With Us
+              <Button variant="glass" size="xl" asChild>
+                <a href="/partnership">Partner With Us</a>
               </Button>
             </div>
 

@@ -14,7 +14,152 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      applications: {
+        Row: {
+          applicant_id: string
+          cover_letter: string | null
+          created_at: string
+          id: string
+          opportunity_id: string
+          status: string | null
+          updated_at: string
+        }
+        Insert: {
+          applicant_id: string
+          cover_letter?: string | null
+          created_at?: string
+          id?: string
+          opportunity_id: string
+          status?: string | null
+          updated_at?: string
+        }
+        Update: {
+          applicant_id?: string
+          cover_letter?: string | null
+          created_at?: string
+          id?: string
+          opportunity_id?: string
+          status?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "applications_opportunity_id_fkey"
+            columns: ["opportunity_id"]
+            isOneToOne: false
+            referencedRelation: "opportunities"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      opportunities: {
+        Row: {
+          created_at: string
+          description: string
+          duration: string | null
+          equity_percentage: number
+          id: string
+          requirements: string | null
+          role: string
+          startup_id: string
+          status: string | null
+          stipend_amount: number
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          duration?: string | null
+          equity_percentage: number
+          id?: string
+          requirements?: string | null
+          role: string
+          startup_id: string
+          status?: string | null
+          stipend_amount: number
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          duration?: string | null
+          equity_percentage?: number
+          id?: string
+          requirements?: string | null
+          role?: string
+          startup_id?: string
+          status?: string | null
+          stipend_amount?: number
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      partnerships: {
+        Row: {
+          contact_email: string
+          contact_name: string
+          contact_phone: string | null
+          created_at: string
+          id: string
+          institution_name: string
+          institution_type: string | null
+          message: string | null
+          status: string | null
+        }
+        Insert: {
+          contact_email: string
+          contact_name: string
+          contact_phone?: string | null
+          created_at?: string
+          id?: string
+          institution_name: string
+          institution_type?: string | null
+          message?: string | null
+          status?: string | null
+        }
+        Update: {
+          contact_email?: string
+          contact_name?: string
+          contact_phone?: string | null
+          created_at?: string
+          id?: string
+          institution_name?: string
+          institution_type?: string | null
+          message?: string | null
+          status?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string | null
+          id: string
+          updated_at: string
+          user_type: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name?: string | null
+          id: string
+          updated_at?: string
+          user_type?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+          user_type?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
